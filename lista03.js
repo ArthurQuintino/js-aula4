@@ -92,8 +92,9 @@ console.log(resulttt)
 */
 
 
-const newdogNames = dogNames.concat('Nina')
-const content = dogNames
+dogNames = dogNames.concat('Nina')
+const initials = dogNames[0][0] + dogNames[1][0] + dogNames[2][0] + dogNames[3][0] + dogNames[4][0]  
+console.log(initials)
 
 
 
@@ -103,7 +104,7 @@ const content = dogNames
 - Utilize o método adequado para isso.
 */
 
-
+console.log(initials.toLowerCase())
 
 /*
 10 - Comente o console.log acima e:
@@ -116,6 +117,9 @@ parte "ca" do 2º item e a parte "na" do 4º item;
 */
 
 
+//const dessert = dogNames[0][0] + dogNames[0][4] + dogNames[1][2] + dogNames[1][3] + dogNames[4][2] + dogNames[4][3] + dessert.replace('n','d')
+//console.log(`A ${dessert} é um doce à base de coco, tradicional na América Latina e em Angola.`)
+
 
 /*
 11 - Comente o console.log acima e:
@@ -125,3 +129,6 @@ parte "ca" do 2º item e a parte "na" do 4º item;
 já tem, mais 4;
 - Agora, o resultado exibido no console deve ser 729.
 */
+
+let oddNumbers = [3,5,7]
+console.log((oddNumbers[1]+4)**3)
