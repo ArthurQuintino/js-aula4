@@ -24,8 +24,8 @@ console.log(brazilianFoods)
 - Exiba apenas o 2º item desse array no console.
 */
 
-brazilianFoods [1] = 'Pão de Queijo'
-console.log(brazilianFoods )
+brazilianFoods[1] = 'Pão de Queijo'
+console.log(brazilianFoods[1])
 
 /*
 04 - Comente o console.log acima e:
@@ -37,10 +37,8 @@ mas sem digitar os nomes das comidas diretamente;
 - Exiba a foodsInfo no console.
 */
 
-const foodsInfo = "Até aqui, o array \"brazilianFoods\" possui NUMERO_DE_ITENS itens: NOME_DO_ITEM_1,  NOME_DO_ITEM_2 e NOME_DO_ITEM_3.";
-const lenght = brazilianFoods.length
-const result =  foodsInfo.replace("NUMERO_DE_ITENS itens: NOME_DO_ITEM_1,  NOME_DO_ITEM_2 e NOME_DO_ITEM_3.", lenght) +" itens: " + brazilianFoods.join(", ");
-console.log(result)
+const foodsInfo =`Até aqui, o array \"brazilianFoods\" possui ${brazilianFoods.length} itens: ${brazilianFoods[0]} ${brazilianFoods[1]} e ${brazilianFoods[2]}`;
+console.log(foodsInfo)
 
 /*
 05 - Comente o console.log acima e:
@@ -62,8 +60,7 @@ console.log(dogNames)
 - O resultado deve ser: "nome1, nome2, nome3, nome4".
 */
 
-let dogNamess = dogNames.join(", ")
-console.log(dogNamess)
+console.log(dogNames.join(', '))
 
 
 /*
@@ -75,10 +72,8 @@ utilizando o método adequado para isso;
 - O console deve continuar exibindo o último item do array, que agora é "Lilica".
 */
 
-
-const lastCaract = dogNames.length
-const resulttt = dogNames.slice(lastCaract - 1)
-console.log(resulttt)
+dogNames.pop()
+console.log(dogNames.slice(dogNames.length -1))
 
 
 
@@ -91,10 +86,9 @@ console.log(resulttt)
 - Exiba a "initials" no console.
 */
 
-
-dogNames = dogNames.concat('Nina')
-const initials = dogNames[0][0] + dogNames[1][0] + dogNames[2][0] + dogNames[3][0] + dogNames[4][0]  
-console.log(initials)
+dogNames.push('Nina')
+//const initials = `${dogNames[0][0]}${dogNames[1][0]}${dogNames[2][0]}${dogNames[3][0]}${dogNames[4][0]}` 
+//console.log(initials)
 
 
 
@@ -104,7 +98,7 @@ console.log(initials)
 - Utilize o método adequado para isso.
 */
 
-console.log(initials.toLowerCase())
+//console.log(initials.toLowerCase())
 
 /*
 10 - Comente o console.log acima e:
@@ -117,8 +111,9 @@ parte "ca" do 2º item e a parte "na" do 4º item;
 */
 
 
-//const dessert = dogNames[0][0] + dogNames[0][4] + dogNames[1][2] + dogNames[1][3] + dogNames[4][2] + dogNames[4][3] + dessert.replace('n','d')
-//console.log(`A ${dessert} é um doce à base de coco, tradicional na América Latina e em Angola.`)
+//const dessert = `${dogNames[0].slice(3)}${dogNames[1].slice(2)}${dogNames[4].slice(2)}`
+//console.log(`A ${dessert.replace("n", "d")} é um doce à base de coco, tradicional na América Latina e em Angola.`)
+
 
 
 /*
@@ -131,4 +126,5 @@ já tem, mais 4;
 */
 
 let oddNumbers = [3,5,7]
+console.log(oddNumbers[1]**3)
 console.log((oddNumbers[1]+4)**3)
